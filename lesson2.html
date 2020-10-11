@@ -23,7 +23,15 @@
     <!-- Theme CSS -->
     <link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css">
 
+    <style>
+        .dropdown .dropdown_content {
+            display: none;
+        }
 
+        .dropdown_content {
+            transition: 0.5 linear;
+        }
+    </style>
 
 </head>
 
@@ -44,13 +52,16 @@
                 <div class="profile-section pt-3 pt-lg-0">
 
                     <ul class="navbar-nav flex-column text-left">
-
                         <li class="nav-item active">
                             <a class="nav-link" href="lesson1.html">Урок 2.</a>
                             <a class="nav-link" href="#first" style="padding-top: 0px;
                                 padding-bottom: 0px;padding-left: 20px;padding-right: 0px;">Число Фробеніуса</a>
+                            <a class="nav-link" href="#second" style="padding-top: 0px;
+                                padding-bottom: 0px;padding-left: 20px;padding-right: 0px;">Що таке алгоритм?</a>
+                            <a class="nav-link" href="#third" style="padding-top: 0px;
+                                padding-bottom: 0px;padding-left: 20px;padding-right: 0px;">Ще трошки математики</a>
                             <a class="nav-link" href="#fourth" style="padding-top: 0px;
-                                padding-bottom: 0px;padding-left: 20px;padding-right: 0px;">Вправи на повторення:</a>
+                                padding-bottom: 0px;padding-left: 20px;padding-right: 0px;">Трошки задачок:</a>
                         </li>
                     </ul>
 
@@ -138,12 +149,81 @@
                     </ul>
                     </p>
                     <p>
-                        У мові пайтон використовується динамічна типізація, тому нам не треба писати int example=8.
-                        Змінна example автоматично набуде типу int. Якщо ж ми присвоїмо їй після цього значення іншого
+                        У мові пайтон використовується динамічна типізація, тому нам не треба писати int
+                        example=8.
+                        Змінна example автоматично набуде типу int. Якщо ж ми присвоїмо їй після цього значення
+                        іншого
                         типу, тип змінної також зміниться автоматично. Для того щоб визначити тип змінної можна
-                        скористатись функцією type. Розглянемо приклад:
+                        скористатись функцією type.Ми також можемо самостійно міняти тип змінної,для цього треба
+                        вказати його перед значенням, яке ми присвоюємо змінній. Розглянемо приклад:
                     </p>
                     <img src="assets/images/lesson2/typeExample.png" width="80%">
+                    <p>
+                        ЗАУВАЖЕННЯ: Для того щоб вивести комбіновану інформацію(число і стрічку або результат якоїсь
+                        функції і число) через print, необхідно явно перетворити тип змінної за допомогою str().
+                    </p>
+                    <p>
+                        Наша програма для обрахунку числа Фробеніуса буде виглядати десь так:
+                    </p>
+                    <img src="assets/images/lesson2/forbineusExample.png" width="80%">
+                    <a name="second">
+                        <h2>Що таке алгоритм? Ну і може трохи про скорочення операцій</h2>
+                    </a>
+                    <p>
+                        Ми взнали з вами не тільки число Фробеніуса для чисел 5 і 9 а ще й написали алгоритм для його
+                        обрахунку. Алгорит - це послідовне виконання дій програмою. Схематично його можна представити
+                        так:
+                    </p>
+                    <img src="assets/images/lesson2/algorythmExample.png" width="80%">
+                    <p>
+                        Ми могли б переписати наші обчислення з одного рядка у декілька щоб зменшити їх довжину:
+                    </p>
+                    <img src="assets/images/lesson2/rewriteExample.png" width="80%">
+                    <p>
+                        Легко помітити,що ми використали змінну frobenius_number дууже багато раз,при чому більшість з
+                        них йде у віднанні. Для того щоб не писати багато разів такі довгі назви в пайтоні існують
+                        скорочення для операцій:<br>
+                    <ul>
+                        <li>+= замість змінна = змінна + значення
+                        </li>
+                        <li>-= замість змінна = змінна - значення
+                        </li>
+                        <li>*= замість змінна = змінна * значення
+                        </li>
+                        <li>/= замість змінна = змінна / значення
+                        </li>
+                        <li>//= замість змінна = змінна // значення
+                        </li>
+                        <li>**= замість змінна = змінна ** значення
+                        </li>
+                        <li>%/= замість змінна = змінна %/ значення
+                        </li>
+                    </ul>
+                    </p>
+                    <p>
+                        Відповідно наш код можна переписати у вигляді:
+                    </p>
+                    <img src="assets/images/lesson2/rewriteExample2.png" width="80%">
+                    <a name="third">
+                        <h2>Ще трошки математики</h2>
+                    </a>
+                    <p>
+
+                    </p>
+                    <a name="fourth">
+                        <h2>Трошки задачок:</h2>
+                    </a>
+                    <div class="dropdown">
+                        <div>
+                            <p class="click_to_open">Розв'язок</p>
+                        </div>
+                        <div class="dropdown_content">
+                            <p>
+                                Опис розв'язку
+                            </p>
+                            <img src="assets/images/lesson2/algorythmExample.png" width="80%">
+                        </div>
+                    </div>
                 </div>
             </div>
             <!--//container-->
@@ -164,7 +244,7 @@
     <!-- Custom JS -->
     <script src="assets/js/blog.js "></script>
 
-
+    <script src="dropdown.js"></script>
 
 </body>
 
