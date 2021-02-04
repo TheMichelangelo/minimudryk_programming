@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Урок 7. Що таке випадковість?</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog Template">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- FontAwesome JS-->
+    <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js"
+        integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7"
+        crossorigin="anonymous"></script>
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/monokai-sublime.min.css">
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css">
+
+    <style>
+        .dropdown .dropdown_content {
+            display: none;
+        }
+
+        .dropdown_content {
+            transition: 0.5 linear;
+        }
+
+        .click_to_open {
+            padding-left: 20px;
+            color: black;
+            font-weight: bold;
+            font-size: 150%;
+            background: grey;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header text-center">
+
+        <h2 class="blog-name pt-lg-4 mb-0"><a href="index.html">Зміст</a></h2>
+
+        <nav class="navbar navbar-expand-lg navbar-light">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+                aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div id="navigation" class="collapse navbar-collapse flex-column">
+                <div class="profile-section pt-3 pt-lg-0">
+
+                    <ul class="navbar-nav flex-column text-left">
+
+                        <li class="nav-item active">
+                            <a class="nav-link" href="lesson7.html">Урок 7</a>
+                            <a class="nav-link" href="#first" style="padding-top: 0px;
+                                padding-bottom: 0px;padding-left: 20px;padding-right: 0px;">Давайте підкинемо
+                                монетку</a>
+                            <a class="nav-link" href="#second" style="padding-top: 0px;
+                                padding-bottom: 0px;padding-left: 20px;padding-right: 0px;">Випадковості</a>
+                        </li>
+                    </ul>
+
+                    <!--//social-list-->
+                </div>
+                <!--//profile-section-->
+
+
+                <div class="my-2 my-md-3">
+                    <a class=" btn btn-primary " href="index.html ">Повернутись назад</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="main-wrapper">
+
+        <article class="blog-post px-3 py-5 p-md-5">
+            <div class="container">
+                <header class="blog-post-header">
+                    <h1 class="title mb-2">Урок сьомий. Що таке випадковість. Частина 1</h1>
+                    <div class="meta mb-3"><span class="date">Seventh lesson</span><span class="time">60 min
+                            read</span></div>
+                </header>
+                <div class="blog-post-body">
+                    <a name="first">
+                        <h2>Давайте підкинемо монетку</h2>
+                    </a>
+                    <div class="meta mb-3"><span class="date">Let's flip a coin</span></div>
+                    <img src="assets/images/lesson7/coinToss.gif" width="80%">
+                    <p>
+                        Якщо щось не можна передбачити або неможливо підібрати шаблон за яким це щось відбувається,
+                        ми називаємо його випадковим.
+                        Так наприклад результат підкидання монетки чи кидання гральних кубиків здається нам
+                        абсолютно випадковою подією, але якщо б нам вдалось дізнатись усі початкові дані, силу з якою
+                        була підкинута монетка, кількість обертань в повітрі, силу вітру навколо, то змогли б визначити
+                        наперед результат її падіння.
+                    </p>
+                    <img src="assets/images/lesson7/coinCalculation.png" width="80%">
+                    <p>
+                        Вчені навіть створили роботів, які дозволяють підкинути монетку так, щоб отримати саме бажаний
+                        результат.
+                    </p>
+                    <img src="assets/images/lesson7/coinFlipRobot.png" width="80%">
+                    <p>
+                        Мова Python дозволяє згенерувати псевдовипадкові значення. Для цього використовують вбудовану
+                        бібліотеку random.
+                    </p>
+                    <p>
+                        image
+                    </p>
+                    <p>
+                        Розглянемо деякі функції,що містить дана бібліотека:
+                    </p>
+                    <ul>
+                        <li>random() дозволяє отримати випадкове число від 0 до 1.</li>
+                        <li>randint(a, b) дозволяє отримати ціле число з проміжку a b</li>
+                        <li>seed(X) - дозволяє задати число відносно якого буде будуватись випадкова величина, функцію
+                            необхідно викликати перед викликом функції що поверне випадкове значення. Якщо Х не задати,
+                            значенням буде братись час системи(комп'ютера)</li>
+                    </ul>
+                    <a name="second">
+                        <h2>Випадковості</h2>
+                    </a>
+                    <p>
+                        То чи може існувати щось, що б ви не могли передбачити наперед чи обчислити, навіть маючи всі
+                        знання всесвіту? Можливо є щось що ви вважаєте випадковим, але насправді просто не задумується
+                        над шаблоном за яким воно працює або ж ви вже бачили справжню випаковість, тільки не
+                        спостерігали за нею достатньо довго? Можливо вона схована за якимось камуфляжем чи прикриттям
+                        яке випадково може створити який шаблон поведінки?
+                        Ютуб генерує посилання на відео з випадкових літер без жодного шаблону, вдаючи мавпу що
+                        випадково понажимала декілька клавіш на клавіатурі. Хоча інколи ми можемо побачити цілі слова в
+                        посиланні, що наводить на думку що все ж існує якась залежність(для того щоб знайти посилання
+                        яке містить якесь слово в пошуковому запиті необхідно написати
+                        <br><b><i>allinurl:[слово що хочете знайти] site:youtube.com/watch)</i></b>
+                    </p>
+                    <p>
+                        image
+                    </p>
+                    <p>
+                        Найяскравішим випадком знаходження залежності в випадковій послідовності була бібліотека музики
+                        для IPAD. Користувачі інколи помічали схожість в списку випадкових записів з тим що вони слухали
+                        зазвичай, і звинуватили компанію Apple в невипадковій видачі музики. Велика кількість скарг
+                        змусила компанію переписати випадковий генератор так щоб він був менш випадковим.
+                    </p>
+                    <p>
+                        Уявімо, що вас попросили написати власний випадковий генератор назви випадкової мелодії. Перш за
+                        все в
+                    </p>
+                </div>
+            </div>
+            <!--//container-->
+        </article>
+
+        <footer class="footer text-center py-2 theme-bg-dark ">
+
+        </footer>
+
+    </div>
+    <!--//main-wrapper-->
+
+
+    <!-- Javascript -->
+    <script src="assets/plugins/popper.min.js "></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js "></script>
+
+    <!-- Custom JS -->
+    <script src="assets/js/blog.js "></script>
+
+    <script src="dropdown.js"></script>
+</body>
+
+</html>
+
+
+
+
+<!--
+<p style="background-color:rgb(224, 224, 224); padding: 15px; "><i><b>Note:</b> </i></p>
+<img width="120px" src="assets/images/cs30.png" style="margin-bottom: 10px;" alt="">
+
+<br>
+<h2>Повторне використання</h2>
+<div class="meta mb-3"><span class="date">Reusability</span></div>
+-->
