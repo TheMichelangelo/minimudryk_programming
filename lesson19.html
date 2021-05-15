@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Урок 19. Ігра в ... життя</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog Template">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- FontAwesome JS-->
+    <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js"
+        integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7"
+        crossorigin="anonymous"></script>
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/monokai-sublime.min.css">
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css">
+
+    <style>
+        .dropdown .dropdown_content {
+            display: none;
+        }
+
+        .dropdown_content {
+            transition: 0.5 linear;
+        }
+
+        .click_to_open {
+            padding-left: 20px;
+            color: black;
+            font-weight: bold;
+            font-size: 150%;
+            background: grey;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header text-center">
+
+        <h2 class="blog-name pt-lg-4 mb-0"><a href="index.html">Зміст</a></h2>
+
+        <nav class="navbar navbar-expand-lg navbar-light">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+                aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div id="navigation" class="collapse navbar-collapse flex-column">
+                <div class="profile-section pt-3 pt-lg-0">
+
+                    <ul class="navbar-nav flex-column text-left">
+
+                        <li class="nav-item active">
+                            <a class="nav-link" href="lesson18.html">Урок 19</a>
+                            <a class="nav-link" href="#first" style="padding-top: 0px;
+                                padding-bottom: 0px;padding-left: 20px;padding-right: 0px;">Як встановити додаткову
+                                бібліотеку в систему</a>
+                            <a class="nav-link" href="#second" style="padding-top: 0px;
+                                padding-bottom: 0px;padding-left: 20px;padding-right: 0px;">Що таке tkinter</a>
+                            <a class="nav-link" href="#third" style="padding-top: 0px;
+                            padding-bottom: 0px;padding-left: 20px;padding-right: 0px;">Гра в життя</a>
+                            <a class="nav-link" href="#fourth" style="padding-top: 0px;
+                            padding-bottom: 0px;padding-left: 20px;padding-right: 0px;">Задачі</a>
+                        </li>
+                    </ul>
+
+                    <!--//social-list-->
+                </div>
+                <!--//profile-section-->
+
+
+                <div class="my-2 my-md-3">
+                    <a class=" btn btn-primary " href="index.html ">Повернутись назад</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="main-wrapper">
+
+        <article class="blog-post px-3 py-5 p-md-5">
+            <div class="container">
+                <header class="blog-post-header">
+                    <h1 class="title mb-2">Урок 19. Ігра в ... життя</h1>
+                    <div class="meta mb-3"><span class="date"> lesson</span><span class="time">60 min
+                            read</span></div>
+                </header>
+                <div class="blog-post-body">
+                    <a name="first">
+                        <h2>Як встановити додаткову
+                            бібліотеку в систему</h2>
+                    </a>
+                    <div class="meta mb-3"><span class="date">what is pip</span>
+                    </div>
+                    PIP - це система управління пакетами, яка використовується для встановлення та управління
+                    програмними пакетами, написаними на Python. PIP можна розшифрувати як "бажана програма для
+                    встановлення" або "Пакети для встановлення Pip". PIP для Python - це утиліта для управління
+                    встановленнями пакетів PyPI з командного рядка. Якщо ви використовуєте стару версію Python для
+                    Windows, можливо, вам доведеться встановити PIP. Ви можете легко встановити PIP в Windows,
+                    завантаживши інсталяційний пакет, відкривши командний рядок та запуск інсталятора.
+
+                    Ми розглянемо як встановити PIP у Windows, перевірити його версію, оновити та налаштувати.
+                    <ol>
+                        <li>
+                            <b>Перевірка чи PIP вже встановлений</b>
+                            <p>
+                                Для роботи з PIP використовується командний рядок(command prompt).
+                                Для того щоб це зробити, відкрийте меню пуск, введіть cmd і відкрийте додаток("Командная
+                                строка", "Command prompt", "Командний рядок").<br>
+                                <img src="assets/images/lesson19/open_cmd.gif" width="70%"><br>
+                                Після цього введіть команду <b>pip help</b>. У вас має відобразитись наступна
+                                інформація.<br>
+                                <img src="assets/images/lesson19/pip help.png" width="70%"><br>
+                                Якщо цього не сталось(pip йде автоматично з мовою програмування python версії 3.4 і
+                                вище, також в комплекті вже встановлюється virtualenv і pyvenv), вам необхідно
+                                довстановити pip власноруч.
+                            </p>
+                        </li>
+                        <li>
+                            <b>Перевірка версії Python</b>
+                            <p>
+                                Як утиліта Python, PIP вимагає активної інсталяції Python. У нових версіях віртуального
+                                середовища Python та Python PIP вже встановлено, і вам не потрібно його
+                                перевстановлювати.
+                                <br>Щоб визначити, чи встановлено Python:
+                                <br>-Відкрийте вікно командного рядка.
+                                <br>-Коли відкриється вікно консолі, введіть: <b>python</b>
+                                <br>Якщо ця команда не розпізнана, вам потрібно встановити Python, перш ніж ви зможете
+                                встановити PIP. Якщо команда розпізнана, Python відповідає своєю версією та списком
+                                команд. Коли Python встановлений правильно, ви побачите:<br>
+                                <img src="assets/images/lesson19/python_check.png" width="100%"><br>
+                            </p>
+                        </li>
+                        <li>
+                            <b>Установка pip</b>
+                            <p>
+                                Перш ніж встановлювати PIP, завантажте файл <a
+                                    href="https://bootstrap.pypa.io/get-pip.py"> get-pip.py: get-pip.py на pypa.io. </a>
+                                <br>Завантажте файл у потрібну папку Windows. Ви можете зберегти файл у будь-якому
+                                місці,
+                                але пам’ятайте шлях, щоб потім використовувати його.
+                                <br>Знайдіть ще раз в меню пуск "Командний рядок", натисніть на прогрму правою кнопкою
+                                миші і виберіть "Запустити від імені адміністратора". Використайте команду
+                                <b>cd</b> щоб перейти в папку де ви зберегли завантажений файл. а далі введіть команду
+                                <b>python get-pip.py</b>. Після успішного встановлення, для перевірки ви можете ввести
+                                команду з пунтку 1. Також ви можете перевірити версію pip використвуючи команду <b>pip
+                                    --version</b>
+                            </p>
+                        </li>
+                        <li>
+                            <b>Оновлення pip</b>
+                            <p>
+                                <img src="assets/images/lesson19/pip_warning.png" width="100%"><br>
+                                у випадку повідомлення що ваша версія pip застаріла, введіть команду
+                                <b>python -m pip install --upgrade pip</b>
+                            </p>
+                        </li>
+                    </ol>
+
+                    <a name="second">
+                        <h2>Що таке tkinter</h2>
+                    </a>
+                    <p>Tkinter - це безкоштовна бібліотека для розробки графічного інтерфейсу на мові Python (начинна з
+                        Python 3.0 переіменована в tkinter). Tkinter розширюється як інтерфейс Tk і є інтерфейсом до Tcl
+                        / Tk. Tkinter входить у стандартний дистрибутив Python. Tkinter дозволяє створювати додатки
+                        вигляду <br><img src="assets/images/lesson19/tkinter_demo.jpg" width="100%"><br>
+                        <br>Починаючи з версії python 3.8 tkinter входить в стандартні бібліотеки мови python.
+                        Щоб перевірити чи встановлена бібліотека на ваш комп'ютер, ви можете запустити idle і написати
+                        базову програму.
+                        <br><img src="assets/images/lesson19/tkinter_test.png" width="100%"><br>
+                        У складі бібліотеки присутні спільні графічні компоненти:
+                    <ul>
+                        <li> Toplevel / Tk - Окно верхнього рівня (корневой виджет).</li>
+                        <li>Frame - Рамка. Зберігає в собі інші візуальні компоненти, що використовуються для групування
+                            віджетів.</li>
+                        <li>Label - Этикетка. Показує певний текст або графічне зображення.</li>
+                        <li> Entry - Однострочное поле ввода тексту.</li>
+                        <li>Text - Форматируемое поле ввода тексту. Дозволяє показувати, редагувати та форматувати текст
+                            за допомогою різних стилів, а також вводити текст до малюнків та вікна.</li>
+
+                        <li>Canvas - Холст. Можна використовувати для виводу графічних примітивів, таких як
+                            прямоугольники, еліпси, лінії, а також текст, зображення та вікно.</li>
+                        <li>Button - Кнопка. Проста кнопка для виконання команд та інших дій.</li>
+                        <li>Radiobutton - Переключатель. Представляє одно з альтернативних значень кількох переменних.
+                            Обычно действует в группе. Коли користувач вибирає яку-небудь опцію, з більш виборним в цій
+                            же групі елементам вибір знімається. </li>
+                        <li>Checkbutton - Флажок. Похожий на кнопку Radio, не має можливості множинного вибору, надаючи
+                            окрему переменну на кожен екземпляр віджета.</li>
+                        <li> Listbox- Список. Показує список, з якого користувач може видати один або кілька елементів.
+                            Полоса прокрутки - Полоса прокрутки. Можна використовувати разом з деякими іншими
+                            компонентами для їх прокрутки. </li>
+                        <li>Menu - Меню. Служите для організації вспливних (спливаюче) та ніспадаючих (випадаюче) меню.
+                        </li>
+                        <li>Menubutton- Кнопка-меню. Використовується для організації випадаюче меню. </li>
+                    </ul>
+                    Розглянемо їх роботу на прикладі реалізації повноцінної програми.
+                    </p>
+                    <a name="third">
+                        <h2>Гра в життя</h2>
+                        <p>
+                            «Гра́ життя́» — клітинний автомат, вигаданий англійським математиком Джоном Конвеєм 1970
+                            року. Опис гри було опубліковано в жовтневому випуску журналу Scientific American, в рубриці
+                            «Математичні ігри» Мартіна Гарднера (Martin Gardner). Нижче ви можете побачити приклад
+                            роботи гри
+                            <br><img src="assets/images/lesson19/game_of_life_demo.gif" width="100%"><br>
+                        </p>
+                    </a>
+
+                    <a name="fourth">
+                        <h2>Задачі</h2>
+                        <p>
+                            <h3>Задача 1</h3>
+                            <p>
+
+                            </p>
+                            <h3>Задача 2</h3>
+                            <p>
+
+                            </p>
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <!--//container-->
+        </article>
+
+        <footer class="footer text-center py-2 theme-bg-dark ">
+
+        </footer>
+
+    </div>
+    <!--//main-wrapper-->
+
+
+    <!-- Javascript -->
+    <script src="assets/plugins/popper.min.js "></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js "></script>
+
+    <!-- Custom JS -->
+    <script src="assets/js/blog.js "></script>
+
+    <script src="dropdown.js"></script>
+</body>
+
+</html>
+
+
+
+
+<!--
+<p style="background-color:rgb(224, 224, 224); padding: 15px; "><i><b>Note:</b> </i></p>
+<img width="120px" src="assets/images/cs30.png" style="margin-bottom: 10px;" alt="">
+
+<br>
+<h2>Повторне використання</h2>
+<div class="meta mb-3"><span class="date">Reusability</span></div>
+-->
