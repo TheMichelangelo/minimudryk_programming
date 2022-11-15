@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Урок шостий</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog Template">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- FontAwesome JS-->
+    <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js"
+        integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7"
+        crossorigin="anonymous"></script>
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/monokai-sublime.min.css">
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css">
+
+    <style>
+        .dropdown .dropdown_content {
+            display: none;
+        }
+
+        .dropdown_content {
+            transition: 0.5 linear;
+        }
+
+        .click_to_open {
+            padding-left: 20px;
+            color: black;
+            font-weight: bold;
+            font-size: 150%;
+            background: grey;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header text-center">
+
+        <h2 class="blog-name pt-lg-4 mb-0"><a href="index.html">Зміст</a></h2>
+
+        <nav class="navbar navbar-expand-lg navbar-light">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+                aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div id="navigation" class="collapse navbar-collapse flex-column">
+                <div class="profile-section pt-3 pt-lg-0">
+
+                    <ul class="navbar-nav flex-column text-left">
+
+                        <li class="nav-item active">
+                            <a class="nav-link" href="lesson3.html">Урок 6.</a>
+                            <a class="nav-link" href="#first" style="padding-top: 0px;
+                                padding-bottom: 0px;padding-left: 20px;padding-right: 0px;">Логічна перевірка та
+                                логічна змінна</a>
+                            <a class="nav-link" href="#second" style="padding-top: 0px;
+                                padding-bottom: 0px;padding-left: 20px;padding-right: 0px;">Ключові слова and, or та
+                                not</a>
+                            <a class="nav-link" href="#third" style="padding-top: 0px;
+                                padding-bottom: 0px;padding-left: 20px;padding-right: 0px;">Якщо ...</a>
+                            <a class="nav-link" href="#fourth" style="padding-top: 0px;
+                                padding-bottom: 0px;padding-left: 20px;padding-right: 0px;">Трошки задачок:</a>
+                        </li>
+                    </ul>
+
+                    <!--//social-list-->
+                </div>
+                <!--//profile-section-->
+
+
+                <div class="my-2 my-md-3">
+                    <a class=" btn btn-primary " href="index.html ">Повернутись назад</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="main-wrapper">
+
+        <article class="blog-post px-3 py-5 p-md-5">
+            <div class="container">
+                <header class="blog-post-header">
+                    <h1 class="title mb-2">Урок п'ятий</h1>
+                    <div class="meta mb-3"><span class="date">Fifth lesson</span><span class="time">60 min
+                            read</span></div>
+                </header>
+                <div class="blog-post-body">
+                    <a name="first">
+                        <h2>Логічна перевірка та логічна змінна</h2>
+                    </a>
+                    <div class="meta mb-3"><span class="date">Conditions</span></div>
+                    <p>
+                        В попередніх уроках, ми навчились писати прості програмі на мові Python. Всі вони складались з
+                        послідовного виконання деяких дій в чіткій послідовності.<br>Світ в якому ми живемо зазвичай
+                        більш складний і все що відбувається навколо залежить від багатьох факторів. Можливість написати
+                        програму,так щоб в залежності від данних виконати якісь інші обчислення чи не виконувати деяку
+                        частину коду була б дуже помічна.
+                    </p>
+                    <p>
+                        Як і в математиці ми можемо виконувати різні порівняння над змінними, до них належать:
+                    <ul>
+                        <li>Рівність : a == b</li>
+                        <li>Не рівність: a != b</li>
+                        <li>Менше рівно : a <= b</li>
+                        <li>Більше рівно: a >= b</li>
+                        <li>Більше : a > b</li>
+                        <li>Менше : a < b</li>
+                    </ul>
+                    </p>
+                    <p>
+                        Знаючи значення змінних,над якими ми робимо порівняння,завжди можна сказати результат буде
+                        правдою чи брехнею. Таке порівняння можна присвоїти як значення для спеціальної змінної булевого
+                        типу. Вона може приймати тільки 2 значення: True(Правда) або False(брехня).
+                    </p>
+                    <img src="assets/images/lesson3/bool_check.png" width="80%">
+                    <p>
+                        У прикладі ви можете побачити як ми використали 3 змінні для перевірки двох умов і результат цих
+                        перевірок. Ми також можемо комбінувати ці умови за допомогою трьох ключових слів: and, or та
+                        not. Зупинимось на кожному з них детальніше.
+                    </p>
+                    <a name="second">
+                        <h2>Ключові слова and, or та not </h2>
+                    </a>
+                    <p>
+                        Ключове слово and дозволяє поєднувати між собою декілька логічних виразів. Результат такого
+                        об'єднання набуде значення True тільки якщо кожен з виразів,що входить в об'єднання має значення
+                        True.
+                    </p>
+                    <img src="assets/images/lesson3/and_example.png" width="80%">
+                    <p>
+                        Ключове слово or працює так само як and. Результат такого об'єднання набуде значення True якщо
+                        хоча б один з виразів, що входить в об'єднання має значення True. Як і для оператора and, між
+                        собою може бути поєднадо безліч логічних виразів.
+                    </p>
+                    <img src="assets/images/lesson3/or_example.png" width="80%">
+                    <p>
+                        Ключове слово or працює так само як and. Результат такого об'єднання набуде значення True якщо
+                        хоча б один з виразів, що входить в об'єднання має значення True. Як і для оператора and, між
+                        собою може бути поєднадо безліч логічних виразів.
+                    </p>
+                    <img src="assets/images/lesson3/or_example.png" width="80%">
+                    <p>
+                        Оператор not застосовується трішки по іншому: він ставиться на початку, тобто перед логічним
+                        виразом, надаючи йому при цьому протилежного значення. Тобто, вираз not 4 > 8 буде приймати
+                        значення False (протилежний до значення виразу 8 > 4). Взагалі не дуже часто використовують цей
+                        оператор окремо, так як вираз not 4>8 можна замінити на протилежний логічний вираз (в даному
+                        випадку 4<8). Та все ж його часто застосовують із іншими операторами. Для прикладу вираз not 4>8
+                            and 4>3 буде мати значення True (not 4 > 8 = True, 4 > 3 = True).
+                    </p>
+                    <p>
+                        Ми також можемо комбінувати між собою логічні умови використовуючи декілька логічних операторів.
+                        При цьому для того щоб вказати яка перевірка має виконатись першою, її огортають у дужки.
+                    </p>
+                    <img src="assets/images/lesson3/not_and_or_example.png" width="80%">
+                    <p>
+                        Зауваження: У випадку порівняння якогось значення і змінною, хороші програмісти спочатку
+                        запишуть значення. Це повязано з тим що оператор порівняння == і присвоєння значення = дуже
+                        схожі, тому випадково не поклавши один знак можна витратити купу часу на пошук проблеми в
+                        програмі і чому вона не працює.
+                    </p>
+                    <p>
+                        Зауваження: Якщо нам необхідно перевірити чи змінна а більше змінної b і менше змінної c це
+                        можна записати через and у вигляді: b < a and a < c або скористатись вбудованою в Python
+                            функцією ланцюгової перевірки виразів і записати це як b < a < c </p>
+                            <a name="third">
+                                <h2>Якщо ... </h2>
+                            </a>
+                            <p>
+
+                            </p>
+                            <a name="fourth">
+                                <h2>Трошки задачок:</h2>
+                            </a>
+                </div>
+            </div>
+            <!--//container-->
+        </article>
+
+        <footer class="footer text-center py-2 theme-bg-dark ">
+
+        </footer>
+
+    </div>
+    <!--//main-wrapper-->
+
+
+    <!-- Javascript -->
+    <script src="assets/plugins/popper.min.js "></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js "></script>
+
+    <!-- Custom JS -->
+    <script src="assets/js/blog.js "></script>
+
+    <script src="dropdown.js"></script>
+</body>
+
+</html>
+
+
+
+
+<!--
+<p style="background-color:rgb(224, 224, 224); padding: 15px; "><i><b>Note:</b> </i></p>
+<img width="120px" src="assets/images/cs30.png" style="margin-bottom: 10px;" alt="">
+
+<br>
+<h2>Повторне використання</h2>
+<div class="meta mb-3"><span class="date">Reusability</span></div>
+-->
