@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Система контролю версій Git</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog Template">
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- FontAwesome JS-->
+    <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js"
+        integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7"
+        crossorigin="anonymous"></script>
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/monokai-sublime.min.css">
+
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css">
+
+    <style>
+        .dropdown .dropdown_content {
+            display: none;
+        }
+
+        .dropdown_content {
+            transition: 0.5 linear;
+        }
+
+        .click_to_open {
+            padding-left: 20px;
+            color: black;
+            font-weight: bold;
+            font-size: 150%;
+            background: grey;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header text-center">
+
+        <h2 class="blog-name pt-lg-4 mb-0"><a href="index.html">Зміст</a></h2>
+
+        <nav class="navbar navbar-expand-lg navbar-light">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
+                aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div id="navigation" class="collapse navbar-collapse flex-column">
+                <div class="profile-section pt-3 pt-lg-0">
+
+                    <ul class="navbar-nav flex-column text-left">
+
+                        <li class="nav-item active">
+                            <a class="nav-link" href="bonus1.html">Бонус</a>
+                            <a class="nav-link" href="#first" style="padding-top: 0px;
+                                padding-bottom: 0px;padding-left: 20px;padding-right: 0px;">Що таке система контролю версій</a>
+                            <a class="nav-link" href="#second" style="padding-top: 0px;
+                                padding-bottom: 0px;padding-left: 20px;padding-right: 0px;">Github як приклад СКВ</a>
+                            <a class="nav-link" href="#third" style="padding-top: 0px;
+                            padding-bottom: 0px;padding-left: 20px;padding-right: 0px;">Основні можливості сервісу Github</a>
+                            <a class="nav-link" href="#fourth" style="padding-top: 0px;
+                            padding-bottom: 0px;padding-left: 20px;padding-right: 0px;">Робота з Github desktop</a>
+                            <a class="nav-link" href="#fifth" style="padding-top: 0px;
+                            padding-bottom: 0px;padding-left: 20px;padding-right: 0px;color:red;">(PRO)Робота з git через консоль</a>
+                        </li>
+                    </ul>
+
+                    <!--//social-list-->
+                </div>
+                <!--//profile-section-->
+
+
+                <div class="my-2 my-md-3">
+                    <a class=" btn btn-primary " href="index.html ">Повернутись назад</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="main-wrapper">
+
+        <article class="blog-post px-3 py-5 p-md-5">
+            <div class="container">
+                <header class="blog-post-header">
+                    <h1 class="title mb-2">Бонус. Система контролю версій Git</h1>
+                    <div class="meta mb-3"><span class="date"> lesson</span><span class="time">30 min
+                            read</span></div>
+                </header>
+                <div class="blog-post-body">
+                    <a name="first">
+                        <h2>Що таке система контролю версій</h2>
+                    </a>
+                    <div class="meta mb-3"><span class="date">what is version control system</span>
+                    </div>
+                    У вас бувало таке, що ви думаєте як написати програму, пробуєте вирішити задачу, довго пишете код і 
+                    зрозуміли що попередній варіант працював краще/вибило світло і нічого не збереглось/файл загубився (виберіть свій варіант болю).
+                    Або можливо вам треба було перекинути програму другу і ви кидати її текстом,який обрізано в 100500 повідомлень/
+                    файлом, який антивірус друга видалив як вірус/пхали все в архів а потім він не відкривася?
+                    <br><br>
+                    Що ж, насправді ці проблеми існують стільки ж часу, скільки і комп'ютери, але програмісти дуже себелюбні, тому перш за все
+                    вирішують проблеми, які самі собі й створюють, тож рішення є - це система контролю версій.
+                    <br><br><img src="assets/images/bonus1/meme1.png" width="100%"><br>
+                    <br>Система контролю версій - інструмент, який дозволяє зберегти  проміжні зміни в коді.
+                    Системи керування версіями зазвичай використовуються при розробці програмного забезпечення для відстеження,
+                    документування та контролю над поступовими змінами в електронних документах: 
+                    у вихідному коді застосунків, кресленнях, електронних моделях та інших документах,
+                     над змінами яких одночасно працюють декілька людей.
+                     <br><br>Кожна версія позначається унікальною цифрою чи літерою, зміни документу занотовуються. 
+                     Зазвичай також зберігаються дані про автора зробленої зміни та її час.
+                     <br><br>Існують два основні типи систем керування версіями: з централізованим сховищем та розподіленим.
+                     <br><br><i>Система збереження історії редагувань статей, що застосовується у Вікіпедії є прикладом системи керування версіями.</i>
+                    <a name="second">
+                        <h2>Github як приклад СКВ</h2>
+                    </a>
+                    <p>Cистеми контролю версій поділяються на різні категорії, деякі навіть бувають вбудованими в 
+                        середовище програмування. Однією з найпопулярніших систем є <a href="https://github.com/"><b>Github</b></a>.
+                        <br><br><img src="assets/images/bonus1/git_main.png" width="100%"><br><br>
+                    Натиснувши на кнопку <b><i>Sign up</i></b> і пройшовши невелику реєстрацію ми отримуємо доступ до власного робочого простору,
+                    в рамках якого можемо створювати проєкти і працювати з ними. Ми можемо створювати як публічні так і приватні проєкти. 
+                    Будь-який створений проєкт можна змінити з публічного на приватний і навпаки. Доступ до публічних проєктів мають усі користувачі сервісу.
+                    Натомість доступ до приватних має лиш власник і обрані користувачі, яким власник надав доступ.
+                    <br><br><img src="assets/images/bonus1/meme2.png" width="100%"><br>
+                    </p>
+                    <a name="third">
+                        <h2>Основні можливості сервісу Github</h2>
+                        <p>
+                            То що ж можна зробити використовуючи Github?
+                            <br><br>Перш за все - створити проєкт. Для цього необхідно натиснути на кнопочку <b><i>new</i></b> або <b><i>create new repository</i></b>.
+                            <br><br><img src="assets/images/bonus1/new-repo.png" width="100%"><br>
+                            Після цього необхідно заповнити інформацію відносно вашого проєкту і натиснути кнопку <b><i>create repository</i></b>. Наприклад 
+                            <br><br><img src="assets/images/bonus1/create_example.png" width="60%"><br>
+                            <br>Наступне, що ви побачите буде це вікно. Ми до нього ще повернемось в наступних пунктах. Наразі нас цікавить тільки підпис <b><i>uploading an existing file</i></b>. 
+                            Натискаємо на нього і переходимо за посиланням. 
+                            <br><br><img src="assets/images/bonus1/new_repo_first_view.png" width="60%"><br>
+                            Тепер необхідно обрати файли, які ви бажаєте завантажити і зберегти і додати повідомлення-причину збереження. Потім необхідно натиснути
+                            на кнопку <b><i>commit changes</i></b>.
+                            <br><br>
+                            Вітаю, ви зберегли(закомітили) свої перші зміни. Ви неперевершині!!!
+                            <br><br><img src="assets/images/bonus1/meme3.png" width="60%"><br>
+                        </p>
+                    </a>
+                </div>
+            </div>
+            <!--//container-->
+        </article>
+
+        <footer class="footer text-center py-2 theme-bg-dark ">
+
+        </footer>
+
+    </div>
+    <!--//main-wrapper-->
+
+
+    <!-- Javascript -->
+    <script src="assets/plugins/popper.min.js "></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js "></script>
+
+    <!-- Custom JS -->
+    <script src="assets/js/blog.js "></script>
+
+    <script src="dropdown.js"></script>
+</body>
+
+</html>
